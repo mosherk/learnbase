@@ -1,14 +1,173 @@
 /* 顶部和头部样式 */
+/* 顶部浮动 */
 .topMenu{
     width: 100%; height: 32px;
     line-height: 32px;
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 101;
     padding: 0px;
     background: #f7f7f7;
     border-bottom: 1px solid #eee;
 }
+.comCont{width: 1200px; margin: 0 auto;}
+indexCont{width: 1200px; height: 42px; margin: 0 auto;}
+.indexContMain{
+
+}
+
+.indexCont .tl li {margin: 0 10px;}
+
+
+.tw li{float: left;position: relative;}
+.tw .b1 i{
+    padding-left: 15px;
+    background: url(../images/top-base.png) no-repeat;
+    width: 10px; height: 11px;
+}
+.tw .b2 i{
+    padding-left: 15px;
+    background: url(../images/top-tel.png) no-repeat;
+    width: 10px; height: 16px;
+}
+.login b{
+    font-weight: lighter; height: 32px;
+    line-height: 32px; white-space: nowrap;
+}
+.login a{ margin: 0 10px;}
+
+
+.tmCont .webnav,.tmCont strong.top_icon{
+    background:url(../images/tmCont.gif) no-repeat;
+}
+.tmCont{margin-top: 5px; line-height: 22px; color: #333;}
+.tmCont .webnav{float: left; position: relative; background-position: right top;}
+.tmCont strong{
+    display: block;
+    position: relative;
+    height: 25px;
+    padding: 0 10px;
+    font-weight: normal;
+    cursor: default;
+    z-index: 20px;
+}
+.tmCont .top_hidebox{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 400px;
+    left: -339px;
+    padding: 10px; border: 1px solid #dfdfdf;
+    box-shadow: 1 1px 2px #ccc;
+    background: #fff;
+    z-index: 10; padding-top: 1px;
+}
+.tmCont li.hover strong{
+    border: 1px solid #dfdfdf;
+    border-bottom: 0;
+    background-color: #fff;
+}
+.tmCont li.hover{ margin: -1px -1px 0 -1px;}
+.tmCont li.htphone{ _width:83px;}
+.tmCont li.htphone .top_hidebox{width:71px;padding:1px 5px 0;}
+.tmCont .htphonebox{padding:5px;border-top:1px solid #f3f3f3;}
+.tmCont strong.top_icon{padding-right: 23px; background-position: -23px;}
+.tmCont li.hover strong.top_icon{background-position: right -46px;}
+.tmCont li.webnav{_width:83px}
+.tmCont li.webnav .top_hidebox{width: 61px; left: 0px;}
+.top_hidebox a{color: #666;}
+.top_hidebox a:hover{color:#8cb91e;text-decoration: none;}
+
+
+/* 头部的样式 */
+.header{padding: 0; height: 15px; width: 1200px; margin: 0 auto;}
+.header .logo {float: left; margin-top: 5px;}
+.shopCar{float: right;margin-top: 30px;}
+.shopClick {width:100px;}
+.amount{position: absolute;top: 2px;left: 31px;width: 16px;height: 16px;color: #fff;text-align: center;line-height: 16px;z-index: 5;}
+.shopBline{position: absolute;left: 1px;bottom: -2px;width: 118px;height: 3px;background: #fff;overflow: hidden;z-index: 7;display: none;}
+/*.shopClick{position: absolute;left: 0;top: 0;width: 120px;height: 40px;overflow: hidden;z-index: 8;width: 120px;height: 40px;background: url(images/zzrgouwuche.jpg) no-repeat;}*/
+.shopBox{border: 1px solid #dfdfdf;box-shadow: 0 1px 2px #ccc;z-index: 10;position: absolute;margin-top: -2px;right: 0px;width: 320px;z-index: 6;padding-top: 12px;background: #fff;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;*z-index:99999;}
+.shopBady{color: #3c3c3c;font-weight: bold;text-indent: 12px;width:320px;}
+.shopBox ul{float:left;color: #ff3e3e;cursor: pointer;width: 320px;display: inline-block;border-bottom: 1px solid #eeeeee;}
+.shopBox ul li{float: left;width: 290px;padding: 5px 10px;}
+.sImg{float: left;width: 40px;height: 40px;margin-right: 11px;}
+.sImg img{width: 100%;height: 100%;}
+.shopName{float: left;width: 200px;height: 40px;}
+.shopName1{width: 162px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #3c3c3c;font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;}
+.shopName2{width: 100%;height: 20px;line-height: 20px;font-size: 12px;color: #888;}
+.shopRemove{float: right;height: 40px;}
+.shopjg{height: 20px;line-height: 20px;font-size: 12px;color: #dd0000;}
+.removeBtn{height: 20px;line-height: 20px;font-size: 12px;color: #888;cursor: pointer;text-align: right;}
+.lookSBtn{float: right;width:320px;padding-top: 15px;padding-bottom: 15px;height: 30px;overflow: hidden;}
+.lookSBtn a{float: right;height: 25px;overflow: hidden;background: #ff7101;color: #fff;font-size: 12px;text-align: center;line-height: 25px;margin-right: 9px;
+padding: 0 10px;border-radius: 2px;}
+
+
+/* 搜索框部分 */
+.search{float: left; width: 395px; margin: 30px 10px 10px 100px;}
+.search form{float: left;}
+.search form input{float: left;}
+.search .headinputbox{float:left;margin:2px 0 0 0;padding:2px 5px;}
+.search .keyword{width: 290px; color: #aeaeae; height: 31px; border: 2px solid #4a8114; padding: 0 5px; font: normal 14px/31px;}
+.search .btsearch{width:90px;height:35px;background:#4A8114;color:#fff; cursor:pointer;font:bold 14px/35px "";}
+.search input{float: left;}
+
+.search_hot{float: left; height: 30px; line-height: 30px;}
+.search_hot dl{float: left; width: 395px; color: #666;}
+.search_hot dt,dd {float: left; }
+.search_hot a{margin: 0px 8px 0px 0px; color: #979797;}
+/* logo部分的样式 */
+.logo .logo-text {color: #000;font-size: 14px;font-family: "微软雅黑";clear: both;letter-spacing: 2px;margin-left: 17px;width: 275px;}
+.logo .logo-text font {font-family: "微软雅黑";font-size: 14px;font-weight: bold;}
+/* 右上角标签 */
+.dh-list li {float: left;display: block;width: 390px;padding: 5px 0 6px 10px;clear: both;overflow: hidden;}
+.dh-list li h4 {float: left;width: 100%;font-weight: 700;font-size: 12px;text-align: left;color: #666666;}
+.dh-list .dh_wenzi a{float: left;padding: 0 5px;height: 18px;overflow: hidden;}
+.dh-list s{float:left;}
+.dh-list li a {float: left;}
+.dh-list s{text-decoration:none;}
+.dh-list .dh_title {width: 400px;font-weight: 700;padding-top: 2px;padding-bottom: 0;margin-top: 5px;margin-right: -10px;
+white-space: nowrap;}
+.dh-list .dh_title a{float: left;padding: 0 5px;}
+.dh-list .line {float: left;display: block;width: 380px;padding: 5px 0 6px 10px;clear: both;overflow: hidden;height: 0;
+overflow: hidden;margin-left: 10px;_margin-left: 5px;padding-top: 0;width: 188px;border-bottom: 1px solid #EFEFEF;background: 0;}
+.dh-list .dh_title a:hover {color: #669900;}
+.dh_oneTle {padding-left:0;}
+
+/*购物车CSS*/
+.shopCont {float:left;line-height:22px;color:#333;}
+.shopCont li{float:left;position:relative;}
+.shopCont strong{display: block;border: 1px solid #EEEEEE;position: relative;
+    font-weight: normal;width: 115px;padding-left: 12px;cursor: default;height: 32px;
+    background: url(../images/publicart.png) no-repeat;z-index: 10;}
+.shopClick span {margin-left: 30px;line-height: 30px;}
+.shopCont .shopBox{}
+.shopCont li.hover strong{background-color: #fff;box-shadow: 0px 0px 1px 0px #E7E4E4;border-bottom: 0;}
+.shopCont li.hover{}
+.shopCont li.htphone .shopBox{width:71px;padding:1px 5px 0;}
+/* .shopCont strong.top_icon{}
+.shopCont li.hover strong.show_icon{} */
+.shopCont li.webnav{float:left;}
+.shopCont li.webnav .shopBox{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
