@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+    <script>
+        //ES8
+        // async 函数 和await结合能让异步代码变得和同步一样
+        async function fn(){
+            // async函数返回值promise对象，promise结果由async函数执行的返回值决定
+            // 1.只要返回的不是一个promise类型对象，比如字符串、数组、undefind等
+            // 则函数的返回结果就是成功的promise对象
+            // return '浙大';
+            // return 
+            // 2.抛出错误   返回值是失败的对象（失败的promise）
+            // throw new Error('出错啦')
+            // 3.如果返回结果是promise对象 --情况较多
+            return new Promise((resolve,reject) =>{
+                //Promise成功则函数fn也成功，成功的值就是函数返回的promise成功的值
+                resolve('成功的数据')
+                //失败同理fn也失败，值为promise失败的值
+                // reject('失败的错误')
+            });
+        }
+        const result = fn()
+        console.log(result);
+
+        //调用then方法
+        result.then(value =>{
+            console.log(value);
+        },reason => {
+            console.warn(reason);
+        })
+    </script>
+</body>
+</html>

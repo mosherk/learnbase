@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象方法扩展</title>
+</head>
+<body>
+    <script>
+        // 1. Object.is 判断来年改革值是否完全相等
+        console.log(Object.is(120,120)); // ===
+        console.log(Object.is(NaN,NaN));
+        console.log(NaN===NaN)
+
+        // 2.Object.assign 对象的合并
+        const config1 = {
+            host:'loaclhost',
+            prot:'3306',
+            name:'root',
+            pass:'root',
+            test:'test'
+        }
+        const config2 = {
+            host:'http://baidu.com',
+            prot:'33060',
+            name:'baidu.com',
+            pass:'iloveyou',
+            test2:'test2'
+        }
+        //第一个参数是被覆盖的
+        console.log(Object.assign(config1,config2));
+        console.log(config1);
+
+        // 3.Object.setPrototypeOf  Object.getPrototypeOf
+        const school = {
+            name:'清华'
+        }
+        const cities = {
+            xiaoqu:['北京','深圳','上海']
+        }
+        Object.setPrototypeOf(school,cities)
+        console.log(school);
+        console.log(Object.getPrototypeOf(cities));
+    </script>
+</body>
+</html>

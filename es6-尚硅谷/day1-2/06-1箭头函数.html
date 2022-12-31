@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<body>
+    <script>
+        // 1.声明
+        // let fn = (a,b) =>{
+        //     return a+b
+        // }
+        // let result = fn(2,3)
+        // console.log(result);
+
+        // this特性
+        // 1.this是静态的，this始终指向函数声明时所在作用域下的this值
+        function getName(){
+            console.log(this.name);
+        }
+        let getName2 = () =>{
+            console.log(this.name);
+        }
+        // 设置window对性爱那个的name属性
+        window.name = 'mosherk'
+        const school = {
+            name:'qinghua'
+        }
+        // 直接调用
+        getName();
+        getName2();
+
+        // call方法调用
+        getName.call(school)
+        getName2.call(school)
+        console.log("--------------------");
+
+        // 2.不能作为构造函数实例化对象
+        // let Person = (name,age) =>{
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // let me = new Person('xiao',30)//Person is not a constructor
+        // console.log(me);
+
+        //3.不能使用argument变量
+        // let fn = () =>{
+        //     console.log(arguments);
+        // }
+        // fn(1,2,3)//arguments is not defined
+
+        // 4.箭头函数简写
+        // 1)形参只有一个时
+        let add = (a) =>{
+            return a+a
+        }
+        console.log(add(4));
+        // 2)省花括号，代码体质有一条语句时
+        let pow = n => n*n
+        console.log(pow(4));
+    </script>
+</body>
+</html>

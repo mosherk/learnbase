@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类继承-2</title>
+</head>
+<body>
+    <script>
+        //class方式继承
+        //重写，子类声明一个和父类同名的方法
+        class Phone{
+            //构造方法
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price;
+            }
+            // 父类的成员属性
+            callto(){
+                console.log('我能打电话');
+            }
+        }
+        // 子类
+        class SmartPhone extends Phone{
+            //构造方法
+            constructor(brand,price,color,size){
+                // super能够调用父类constructor
+                super(brand,price) //Phone.call(this,brand, price)
+                this.color = color;
+                this.size = size
+            }
+            // 之类独有的方法
+            photo(){
+                console.log('我拍照');
+            }
+            playGame(){
+                console.log('玩游戏');
+            }
+            callto(){
+                //super 不能调用父类同名方法 super.call能够
+                console.log('我能视频通话');
+            }
+        }
+        const xiaomi = new SmartPhone('小米','799','黑色','5.5inch')
+        console.log(xiaomi);
+        //调的是子类callto方法
+        xiaomi.callto()
+        xiaomi.playGame()
+        xiaomi.photo()
+    </script>
+</body>
+</html>

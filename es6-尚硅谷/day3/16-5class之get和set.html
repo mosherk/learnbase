@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get和set</title>
+</head>
+<body>
+    <script>
+        class Phone{
+            // get  动态获取一些数据时
+            // 对对象的属性进行方法的绑定
+            // 对某个属性获取时，执行get对应的函数
+            get price(){
+                console.log('价格属性给读取了');
+                // 返回值就是这个属性的值
+                return 'iloveyou'
+            }
+            // 对某个属性设置时，执行set对应的函数
+            // 也可以判断是否合法
+            set price(newVal){
+                console.log('价格属性被修改了！！');
+            }
+        }
+        // 实例化对象
+        let s = new Phone()
+        console.log(s.price);
+        s.price = 'free'
+    </script>
+</body>
+</html>

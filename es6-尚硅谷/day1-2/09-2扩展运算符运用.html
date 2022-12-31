@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //数组合并
+        const langue = ['java','javascript','go']
+        const name = ['mosherk','jack']
+        // 把数组转为参数序列
+        const hebing = [...langue,...name]
+        console.log(hebing);
+
+        // 2.数组克隆
+        const sanzhihua = ['e','g','m']
+        const sanyecao = [...sanzhihua] //如果元素有引用类型则是浅拷贝
+        console.log(sanyecao);
+
+        // 3.将伪数组转为真数组
+        const divs = document.querySelectorAll('div')
+        console.log(divs);
+        const divArr = [...divs]
+        console.log(divArr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es6引入class，作为对象的模板
+        // 基本上es6的类是一种语法糖，大部分功能es5基本可以做到
+        // 1)class声明类
+        // 2)constructor定义构造函数初始化
+        // 3)extends 继承父类
+        // 4)super调用父级构造方法
+        // 5)static定义静态方法和属性
+        // 6)父类方法可以重写
+
+        // 手机类
+        //es5构造
+        function Phone(brand,price){
+            this.brand = brand;
+            this.price = price;
+        }
+        //添加方法
+        Phone.prototype.call = function(){
+            console.log('我可以电话');
+        }
+
+        // 实例化对象
+        let Huawei = new Phone('华为','5999')
+        Huawei.call()
+        console.log(Huawei);
+
+        //class
+        class Shouji{
+            // new+类名 时就会自动执行constructor方法
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price;
+            }
+            // 方法必须使用该语法，不能使用es5的对象完整形式
+            call(){
+                console.log('我恶意打电话！！');
+            }
+        }
+        let onePlus = new Shouji('1+',1999)
+        console.log(onePlus);
+    </script>
+</body>
+</html>

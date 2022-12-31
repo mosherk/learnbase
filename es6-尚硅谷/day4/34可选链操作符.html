@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34可选链操作符.html</title>
+</head>
+<body>
+    <script>
+        // ?.
+        //对象类型的时候，层级比较深，不需要层层判断（某个深层也可能有或无
+        function main(config){
+            //没传就会报错
+            // const dbHost = config.db.host
+            // const dbHost = config && config.db && config.db.host
+
+            //可选链操作符,前边的有才读取后边的属性
+            const dbHost = config?.db?.host
+            console.log(dbHost);
+        }
+        main({
+            db:{
+                host:'192.168.1.168',
+                username:'root'
+            },
+            cache:{
+                host:'192.168.1.200',
+                username:'admin'
+            }
+        })
+    </script>
+</body>
+</html>

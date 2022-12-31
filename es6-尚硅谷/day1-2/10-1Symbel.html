@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //symbol:类似字符串的数据类型
+        //symbol值是唯一的，用来解决明明冲突问题
+        //symbol不能和其他数据类型进行运算
+        //定义的对象属性不能用for in 循环遍历，但可用Reflect.ownKeys获取所有键名
+        
+        // 创建
+        let s = Symbol();
+        // 仅通过typeof看不到唯一性
+        console.log(s,typeof s);
+        // Symbol()内的字符串仅为描述字符串,类似于一种注释
+        let s2 = Symbol('one')
+        let s3 = Symbol('one')
+        // 两个并不相等
+        console.log(s2 === s3);
+        // for()使symbol成为一个对象,函数对象
+        let s4 = Symbol.for('two')
+        let s5 = Symbol.for('two')
+        console.log(s4,typeof s4);
+        console.log(s4 === s5);
+        //Symbol.for()方法会根据给定的值，从运行时的symbol注册表中找到对应的symbol，
+        //如果找到了，则返回它，否则，新建一个与该键关联的 symbol，
+        //并放入全局 symbol 注册表中。（弹幕内容）
+
+        // 不能和其他数据类型运算
+        // let result = s + 100;
+        // let result2 = s > 100;
+        // let result3 = s + s;
+
+        // USONB
+        // U undefined
+        // s string   symbol
+        // o object
+        // n null   number
+        // b boolean
+    </script>
+</body>
+</html>

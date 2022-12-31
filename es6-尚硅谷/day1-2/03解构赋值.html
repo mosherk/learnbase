@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的解构赋值</title>
+</head>
+<body>
+    <script>
+        // ES6允许按照一定模式从数组和对象中提取，对变量进行赋值
+        // 1.数组的解构
+        const langue = ['js','java','rust','go']
+        // 按顺序寻找
+        let [one,two,four,three] = langue
+        console.log(one);
+        console.log(two);
+        console.log(three);
+        console.log(four);
+
+        // 2.对象的解构
+        const zhao = {
+            name:'赵六',
+            age:'14',
+            song:function(){
+                console.log('我会唱歌');
+            }
+        }
+        //按变量名寻找
+        let {name,song,age} = zhao
+        console.log(name);
+        console.log(age);
+        console.log(song);
+        song()
+    </script>
+</body>
+</html>
