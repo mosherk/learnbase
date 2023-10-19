@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>表单：表单域、表单控件(表单元素)、提示信息</div>
+    <form action="xxx.php" method="get" name="name1">
+        <!-- 用户名的value可替换为placeholder 更合适，获得焦点时清空 -->
+        <!-- type 文本、密码、当选、多选 -->
+        <!-- name 为输入框命名-->
+        <!-- value -->
+        <!-- checked -->
+        <!-- maxlength 最大长度 -->
+        用户名<input type="text" name="username" value="请输入用户名" id=""><br>
+        密码：<input type="password" name="pwd" id=""><br>
+        性别：<input type="radio" name="sex" value="男" checked="checked">男 <input type="radio" name="sex" value="女">女 <br>
+        爱好：<input type="checkbox" name="hobby" value="吃饭">吃饭 <input type="checkbox" name="hobby">睡觉 <input type="checkbox" name="hobby">打豆豆<br>
+        <hr>
+        <input type="submit" value="免费注册"> 
+        <input type="reset" value="清除">
+        <input type="button" value="获取短信验证码"> <br>
+        上传头像： <input type="file" name="touxiang" id=""> <br> <hr>
+        籍贯：<select name="jiguan" id="">
+            <option value="广东">广东</option>
+            <option value="北京">北京</option>
+            <option value="河北">河北</option>
+            <option value="火星" selected="selected">火星</option>
+        </select><br>
+        <!-- 10行30字 -->
+        <textarea name="" id="" cols="30" rows="10" >今日反馈
+        </textarea>
+    </form>
+</body>
+</html>

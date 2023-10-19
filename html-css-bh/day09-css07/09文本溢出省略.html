@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .danhang {
+      width: 150px;
+      height: 80px;
+      background-color: skyblue;
+      margin: 100px auto;
+      /* 1.先强制一行内显示 */
+      white-space: nowrap;
+      /* 2.超出部分隐藏 */
+      overflow: hidden;
+      /* 3.溢出部分省略号代替 */
+      text-overflow: ellipsis;
+    }
+    .duohang {
+      width: 150px;
+      height: 90px;
+      background-color: skyblue;
+      margin: 100px auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* 弹性伸缩盒子模型 */
+      display: -webkit-box;
+      /* 限制在一个快元素显示的文本行数 */
+      -webkit-line-clamp: 4;
+      /* 设置或检索伸缩盒对象的子元素排列方式 */
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+  <div class="danhang">
+    不经意的销声匿迹，后来真的无人问津
+  </div>
+  <div class="duohang">
+    有一分热，发一分光，就令萤火一般，也可以在黑暗中发一点光，不必等候炬火。
+  </div>
+</body>
+</html>

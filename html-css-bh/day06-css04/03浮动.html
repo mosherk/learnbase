@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            float: left;
+        } */
+        .left,
+        .right {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* float: left; */
+        }
+        .left {
+            float: left;
+        }
+        /* .right {
+            float: right;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        三种布局：
+        标准流(普通流/文档流): 按默认顺序排下来
+        浮动
+        定位
+     -->
+    
+     <!-- <div>1</div>
+     <div>2</div>
+     <div>3</div> -->
+
+    <div class="left">左青龙</div>
+    <div class="right">右白虎</div>
+
+    <!-- 
+        1.浮动元素会脱离标准流
+            1.脱离标准普通流的通知(浮)移动到指定位置(动)
+            2.浮动的盒子不再保留原先的位置 （浮动的盒子会压住其他跑到他位置的盒子）
+        2.浮动的元素会在一行内显示并且元素顶部对齐
+        3.浮动元素会具有行内块元素的特性
+     -->
+</body>
+</html>

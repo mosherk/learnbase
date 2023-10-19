@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13显示隐藏元素</title>
+  <style>
+    .peppa {
+      /* display: none; */
+      /* display: block; */
+      visibility: hidden;
+      /* visibility: inherit; */
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    .george {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+    }
+    .paper {
+      /* overflow: hidden; */
+      /* overflow: scroll; */
+      /* 在需要的时候添加滚动条，没超出就不显示 */
+      overflow: auto;
+      width: 200px;
+      height: 200px;
+      border: 1px solid pink;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    display:none 隐藏对象
+    display:block; 转为块级元素，也有显示元素的功能
+    none之后，元素不再占有原来的位置
+   -->
+   <!-- 
+    visibility: hidden; 隐藏，位置还保留
+    visibility: visible; 显示
+    visibility: inherit; 继承父级元素是否隐藏
+    -->
+  <div class="peppa">佩奇</div>
+  <div class="george">乔治</div>
+
+  <!-- 
+    overflow: visible; 显示
+    overflow: hidden; 超出部分隐藏
+    overflow: scroll; 滚动条
+    注意：定位盒子慎用hidden隐藏，因为可能会隐藏定位元素的效果
+   -->
+  <div class="paper">
+    多年以后，面对行刑队，🐖
+    奥雷里亚诺·布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午。
+    那时的马孔多是一个二十户人家的村落，泥巴和芦苇盖成的屋子沿河岸排开，
+    湍急的河水清澈见底，河床里卵石洁白光滑宛如史前巨蛋。世界新生伊始，
+    许多事物还没有名字，提到的时候尚需用手指指点点。每年三月前后，
+    一家衣衫褴褛的吉卜赛人都会来到村边扎下帐篷，击鼓鸣笛，
+    在喧闹欢腾中介绍新近的发明。最初他们带来了磁石。一个身形肥大的吉卜赛人，
+    胡须蓬乱，手如雀爪，自称梅尔基亚德斯，当众进行了一场可惊可怖的展示，
+    号称是出自马其顿诸位炼金大师之手的第八大奇迹。
+  </div>
+  <div class="paper"></div>
+</body>
+</html>

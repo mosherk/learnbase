@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        .box {
+            width: 900px;
+            /* height: 300px; */
+            /* background-color: blue; */
+            border: 1px solid blue;
+            margin: 0 auto;
+            /* 2.清除浮动 */
+            /* overflow: hidden; */
+        }
+        /* .clearfix:after {
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        } */
+        /* ie6\7专有 */
+        /* .clearfix{ *zoom: 1;} */
+        /* 4.双伪元素 */
+        .clearfix:before,
+        .clearfix:after {
+            content: '';
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+
+        .damao {
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+        }
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+        .footer {
+            height: 200px;
+            background-color: skyblue;
+        }
+        /* .clear {
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 清除浮动：若父元素赋予高度则又无法预料子元素有多少
+    若不赋予高度，子盒子浮动不占高度，父元素高度为0，影响下面标准流的盒子
+    为了解决这个矛盾，所以 -->
+    <div class="box clearfix">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="footer"></div>
+    <!-- 
+        1.额外加标签(隔墙法)：后边加一个块级元素 clear: both;
+            优点：书写方便；
+            缺点：添加了无意义的标签，结构较差
+        2. 父级添加overflow，属性值设置为hidden、auto、scroll
+            优点：代码简洁
+            缺点：无法显示溢出部分
+        3. :after 伪元素法 标签法的升级
+            优点：不需要添加额外标签，结构简单
+            缺点：需要另写代码兼顾低版本浏览器
+        4. 父级添加双伪元素
+            优点：
+     -->
+</body>
+</html>

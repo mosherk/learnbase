@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+    <style>
+        .div {
+            width: 300px;
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 10px;
+        }
+
+        div {
+            text-align: center;
+            background-color: skyblue;
+            margin-top: 20px;
+        }
+        .yuanxing {
+            width: 200px;
+            height: 200px;
+            /* border-radius: 100px; */
+            border-radius: 50%;
+        }
+        .juxing {
+            width: 300px;
+            height: 100px;
+            border-radius: 50px;
+        }
+        .radius {
+            width: 200px;
+            height: 200px;
+            /* border-radius: 10px 20px 30px 40px; */
+            /* 对角线，左上右下，和右上左下 */
+            /* border-radius: 10px 40px; */
+            /* 三个值：左上、右上左下、右下 */
+            /* border-radius: 50px 30px 10px; */
+            border-top-left-radius: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="div">
+        圆的最大直径=1/2min{长度，宽度}
+    </div> -->
+    <h4>常用写法</h4>
+    <div class="yuanxing">圆形</div>
+    <div class="juxing">圆角矩形</div>
+    <div class="radius">设置不同的圆角：</div>
+
+    <script>
+        for(let i = 1; i <= 14; i++){
+            if((100 - i*7) % 8 === 0){
+                console.log('7为'+i,'8为'+(100 - i*7) / 8)
+            }
+        }
+    </script>
+</body>
+</html>

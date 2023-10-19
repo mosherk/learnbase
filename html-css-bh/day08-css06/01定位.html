@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>定位</title>
+  <style>
+    div {
+      width: 200px;
+      margin: 0 auto;
+    }
+    a {
+      text-decoration: none;
+      font-size: 24px;
+      display: block;
+      
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    1. position: static;
+    静态定位：按照标准流，没有边偏移，很少用
+    2. position: relative;
+    相对定位：相对的是盒子原本(标准流)的位置偏移；左上角
+        且盒子位置保留，下面的盒子不会占有它的位置(不脱离标准流)
+    3.position: absolute;
+    绝对定位：相对于祖先元素来说的，若没有祖先元素或祖先元素无定位则以浏览器为准
+        脱离标准流、
+    4.position: fixed;
+    固定定位：以浏览器可视窗口为参照点，固定于浏览器可视区。如浏览器滚动时元素位置不变
+        和父元素无关，也不随页面滚动而滚动，脱离标准流
+    5.position: sticky;
+    粘性定位
+   -->
+   <div>
+    <a href="./02相对定位.html">02相对定位-演示</a>
+    <a href="./03绝对定位.html">03绝对定位-演示</a>
+    <a href="./04固定定位.html">04固定定位-演示</a>
+    <a href="./06粘性定位.html">06粘性定位-演示</a>
+   </div>
+</body>
+</html>

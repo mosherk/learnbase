@@ -1,0 +1,57 @@
+.main {
+  width: 980px;
+  height: 455px;
+  /* background-color: pink; */
+  margin-left: 220px;
+  margin-top: 10px;
+}
+.focus {
+  float: left;
+  width: 721px;
+  height: 455px;
+  /* background-color: skyblue; */
+}
+.newflash {
+  float: right;
+  width: 250px;
+  height: 455px;
+  /* background-color: skyblue; */
+}
+.news {
+  height: 165px;
+  background-color: palegoldenrod;
+}
+.news-hd {
+  height: 33px;
+  line-height: 33px;
+  border: 1px dotted #e4e4e4;
+  padding: 0 15px;
+}
+.news-hd h5 {
+  float: left;
+  font-size: 14px;
+}
+.news-hd .more {
+  float: right;
+}
+.news-hd .more::after {
+  /* 有点不对齐 */
+  font-family: 'icomoon';
+  content: "\e920";
+}
+.lifeservice {
+  height: 209px;
+  background-color: aquamarine;
+}
+.bargain {
+  margin-top: 5px;
+}
+.news-bd {
+  margin-left: -100px;
+}
+
+
+
+
+
+

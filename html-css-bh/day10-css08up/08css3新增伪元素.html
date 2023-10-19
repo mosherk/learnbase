@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08css3新增伪元素</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    div::before {
+      /* content必须要有 */
+      /* 行内 */
+      content: '我';
+      display: inline-block;
+      width: 30px;
+      height: 40px;
+      background-color: purple;
+    }
+    div::after {
+      content: 'mosherk';
+    }
+  </style>
+</head>
+<body>
+  <!-- 用css通过伪元素模拟标签元素，从而简化html元素 -->
+  <!-- 注意：
+    算是子元素
+    通过伪元素创建出来的元素在文档树中找不到的
+    语法: element::before{}
+    before和after必须有 content属性
+    before在父元素里边的前面创建元素，after则在后
+    伪元素选择器和标签选择器一样，权重为1
+   -->
+   <div>是</div>
+</body>
+</html>

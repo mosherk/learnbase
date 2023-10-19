@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+        a:visited {
+            color: orange;
+        }
+        a:hover {
+            color: skyblue;
+        }
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 链接伪类选择器
+    为了能产生效果，需要按一下顺序书写设置
+    a:link      选择所有未被访问的链接
+    a:visited   选择所有已被访问的链接
+    a:hover     选择鼠标指针位于其上的链接.
+    a:active    选择活动链接(鼠标按下未弹起的链接) -->
+    <a href="#">小猪佩奇</a><br>
+    <a href="javascript:;">哈哈哈哈哈</a>
+</body>
+</html>

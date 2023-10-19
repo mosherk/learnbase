@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外边距重叠塌陷</title>
+  <style>
+    .damao,
+    .ermao {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    .damao {
+      margin-bottom: 50px;
+    }
+    .ermao {
+      margin-top: 30px;
+    }
+    .father {
+      width: 400px;
+      height: 400px;
+      background-color: purple;
+      margin-top: 50px;
+      /* border: 1px solid transparent; */
+      /* padding: 1px; */
+      overflow: hidden;
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin-top: 100px;
+      /* 
+        父元素会下榻100px 解决:
+          1.为父元素定义上边框
+          2.为父元素定义上内边距
+          3.为父元素添加overflow:hidden
+      */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    使用margin定义块元素的垂直外边距时，可能会外边距合并
+    1.相邻块元素垂直外边距合并
+    2.嵌套
+   -->
+  <!-- <div class="damao">大毛：垂直外边距</div>
+    <div class="ermao">二毛</div> -->
+
+  <!-- 
+    原因
+  -->
+  <div class="father">
+    <div class="son">嵌套外边距重叠塌陷</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 把ol中的li选出来改为pink */
+        /* 后代选择器 只要是包含在里边的都可以*/
+        ol li {
+            color: pink;
+        }
+        ol li a {
+            color: red;
+        }
+
+        /* 子选择器 */
+        /* 后代选择器，后代的都变红了 */
+        /* .nav a{
+            color: red;
+        } */
+        /* 子选择器，只有子元素 孙子不管 */
+        .nav>a{
+            color: red;
+        }
+        div>a {
+            font-size: 60px;
+        }
+        .nav>p {
+            color: green;
+            /* 虽然font-size是写在这，但他本身会影响到后代 */
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 4类：后后代选择器(重要)、子选择器、并集选择器、伪类选择器 -->
+    <!-- 后代选择器：选择父元素里的子元素 -->
+
+    <ol>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+    </ul>
+
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            hello
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+</html>

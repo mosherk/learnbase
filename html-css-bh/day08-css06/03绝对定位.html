@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03绝对定位</title>
+  <style>
+    .gra {
+      /* position: relative; */
+      width: 700px;
+      height: 700px;
+      background-color: greenyellow;
+    }
+    .father {
+      position: relative;
+      /* top: 200px; */
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+    }
+    .son {
+      position: absolute;
+      bottom: 30px;
+      left: 10px;
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+    }
+    .son2 {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="gra">
+    <div class="father">
+      <div class="son">以最近一级的有定位的祖先元素为参考点移动</div>
+      <div class="son2">son2</div>
+    </div>
+  </div>
+  <div>
+    子绝父相。
+    子绝：在有其他盒子占满父盒子的情况下，子盒子想任意摆放某位置(轮播图)，
+    父相：而父盒子需要占有位置，不能让下面的盒子影响布局，
+  </div>
+  
+</body>
+</html>
