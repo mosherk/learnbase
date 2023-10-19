@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BigInt</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BigInt</title>
 </head>
+
 <body>
-    <script>
-        //大整数
-        let n = 521n;
-        console.log(n,typeof(n));
+	<script>
+		//大整数
+		let n = 521n;
+		console.log(n, typeof (n));
 
-        // BigInt函数，把普通整数值转化为大整数值
-        let num = 123
-        console.log(BigInt(num));
-        // console.log(BigInt(1.2)); //报错
+		// BigInt函数，把普通整数值转化为大整数值
+		let num = 123
+		console.log(BigInt(num));
+		// console.log(BigInt(1.2)); //报错
 
-        //大数值运算
-        let max = Number.MAX_SAFE_INTEGER;
-        console.log(max);//9007199254740991
-        console.log(max+1); //9007199254740992
-        console.log(max+2); //9007199254740992
+		//大数值运算
+		let max = Number.MAX_SAFE_INTEGER;
+		console.log(max);//9007199254740991
+		console.log(max + 1); //9007199254740992
+		console.log(max + 2); //9007199254740992
 
-        //上边无法表示更大结果了，此时借助BigInt
-        console.log(BigInt(max));
-        console.log(BigInt(max) +1n);
-        console.log(BigInt(max) +2n);
-        console.log(BigInt(max) +BigInt(3));
+		//上边无法表示更大结果了，此时借助BigInt
+		console.log(BigInt(max));
+		console.log(BigInt(max) + 1n);
+		console.log(BigInt(max) + 2n);
+		console.log(BigInt(max) + BigInt(3));
 
-        // 弹幕：使用场景：由于在 Number 与 BigInt 之间进行转换会损失精度，
-        //因而建议仅在值可能大于2^53 时使用 BigInt 类型，并且不在两种类型之间进行相互转换
-    </script>
+		// 弹幕：使用场景：由于在 Number 与 BigInt 之间进行转换会损失精度，
+		//因而建议仅在值可能大于2^53 时使用 BigInt 类型，并且不在两种类型之间进行相互转换
+	</script>
 </body>
+
 </html>

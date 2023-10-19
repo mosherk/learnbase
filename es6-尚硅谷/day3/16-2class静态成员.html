@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>静态成员</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>静态成员</title>
 </head>
+
 <body>
-    <script>
-        // 静态成员只能通过构造函数访问，不能通过实例化对象访问，实例成员相反
-        // 构造函数，本身也是对象
-        // function Phone(){
+	<script>
+		// 静态成员只能通过构造函数访问，不能通过实例化对象访问，实例成员相反
+		// 构造函数，本身也是对象
+		// function Phone(){
 
-        // }
-        // //这两个是属于函数对象的，对于这样的属性称为静态成员
-        // Phone.name = '手机';
-        // Phone.change = function(){
-        //     console.log('我可以改变世界');
-        // }
-        // //2.和原型对象才行
-        // Phone.prototype.size = '5.5inch'
-        // //实例对象上没有构造函数上的属性
-        // //1.实例对象是实例对象，和函数对象是不通的
-        // let nokia = new Phone()
-        // console.log(nokia.name);
-        // // nokia.change()
-        // console.log(nokia.size);
+		// }
+		// //这两个是属于函数对象的，对于这样的属性称为静态成员
+		// Phone.name = '手机';
+		// Phone.change = function(){
+		//   console.log('我可以改变世界');
+		// }
+		// //2.和原型对象才行
+		// Phone.prototype.size = '5.5inch'
+		// //实例对象上没有构造函数上的属性
+		// //1.实例对象是实例对象，和函数对象是不通的
+		// let nokia = new Phone()
+		// console.log(nokia.name);
+		// // nokia.change()
+		// console.log(nokia.size);
 
-        class Phone{
-            //静态属性  它属于类，而不属于实例对象
-            static name = '手机'
-            static change(){
-                console.log('我可以改变世界');
-            }
-        }
-        let nokia = new Phone()
-        console.log(nokia.name)
-        console.log(Phone.name)
-    </script>
+		class Phone {
+			//静态属性  它属于类，而不属于实例对象
+			static name = '手机'
+			static change() {
+				console.log('我可以改变世界');
+			}
+			age = 18
+		}
+		let nokia = new Phone()
+		console.log(nokia.name)
+		console.log(Phone.name)
+	</script>
 </body>
+
 </html>

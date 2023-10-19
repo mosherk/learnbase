@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    } */
+    #fa {
+      width: 300px;
+      height: 300px;
+      border: 1px solid red;
+      /* display: flex; */
+    }
+    #fa>div{
+      float: left;
+      width: 32.8%;
+      height: 33%;
+      border: 1px solid red;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+    #start {
+      cursor: pointer;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="fa">
+    <div class="option">一台电脑</div>
+    <div class="option">华为手机</div>
+    <div class="option">清风纸巾</div>
+    <div class="option">致态硬盘</div>
+    <div id="start">开始抽奖</div>
+    <div class="option">鼠标垫</div>
+    <div class="option">雷蛇鼠标</div>
+    <div class="option">小黄鸭</div>
+    <div class="option">保温水杯</div>
+  </div>
+  <script>
+    // 逻辑：1.点击开始，触发一个定时器  
+    // 2.定时器内部，随机一个数，通过这个数来获取奖品所在的元素
+    // 3.必须设置一个时间点，停止定时器
+    let btn = document.getElementById('start')
+    let option = document.getElementsByClassName('option');
+    let timer = null;
+    btn.onclick = function() {
+      // 触发定时器
+      let num = 0;
+      // if(timer == null){
+      //   timer = setInterval(() => {
+      //     num++;
+
+      //     // 2.随机 0-7，通过数组下标获取具体元素
+      //     let ran = Math.round(Math.random()*(7-0)+0)
+          
+      //     // 3.1把所有元素都恢复原来样式
+      //     // (其实可以清除上一个被的元素的样式，没有就不清除)
+      //     for(let i = 0; i　< option.length; i++){
+      //       option[i].style.backgroundColor = '#fff'
+      //     }
+      //     // 3.2给选中元素添加样式
+      //     option[ran].style.backgroundColor = 'orange'
+
+      //     // 4.给定时器设置有效时间，停止定时器
+      //     if(num >= 50){
+      //       clearInterval(timer)
+      //       timer = null
+      //     }
+      //   }, 100);
+      // }
+      
+      // 如果不用if(timer == null)，也就不用重置timer为null
+      timer = setInterval(() => {
+          num++;
+
+          // 2.随机 0-7，通过数组下标获取具体元素
+          let ran = Math.round(Math.random()*(7-0)+0)
+          
+          // 3.1把所有元素都恢复原来样式
+          // (其实可以清除上一个被的元素的样式，没有就不清除)
+          for(let i = 0; i　< option.length; i++){
+            option[i].style.backgroundColor = '#fff'
+          }
+          // 3.2给选中元素添加样式
+          option[ran].style.backgroundColor = 'orange'
+
+          // 4.给定时器设置有效时间，停止定时器
+          if(num >= 50){
+            clearInterval(timer)
+          }
+        }, 100);
+    }
+
+
+    // 为什么不清除timer，第一次抽奖完，timer就为3，下次为4，5，6
+  </script>
+</body>
+</html>

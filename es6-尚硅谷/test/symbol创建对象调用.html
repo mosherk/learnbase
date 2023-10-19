@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>symbol 创建对象属性</title>
+</head>
+
+<body>
+	<script>
+		let game = {
+			name: '俄罗斯方块',
+			down: function () { },
+			up: function () { }
+		}
+		// 在不知道对象内容情况下给对象添加属性和方法
+		// 高效且安全，不会破坏
+		// 1)第一种
+		// let methods = {
+		//     up: Symbol(),
+		//     down: Symbol()
+		// }
+		// game[methods.up] = function(){
+		//     console.log('我可以改变形状');
+		// }
+		// game[methods.down] = function(){
+		//     console.log('我可以快速下降');
+		// }
+		// console.log(game);
+
+		let youxi = {
+			name: '狼人杀',
+			//symbol是一个表达式，一个动态的值
+			[Symbol.for('say')]: function () {
+				console.log('我可以发言');
+			},
+			[Symbol('zibao')]: function () {
+				console.log('我可以自爆');
+			}
+		}
+    let say = Symbol.for('say')
+		console.log(youxi)
+        // 想调用可以：在函数体内部，把[Symbol('say')]改成[Symbol.for('say')]
+        // 其次，在对象youxi外定义变量let say = Symbol.for('say')
+        // 最后，在对象youxi外部调用：youxi[say]()。  ---弹幕的，是这样吗
+
+        // let say = Symobol('say'); let youxi = {[say]: function(){}]}后，通过youxi[say]()来调用
+        // 如果单纯的let youxi = {[Symbol('say'): function(){}]}调用不到的
+	</script>
+</body>
+
+</html>

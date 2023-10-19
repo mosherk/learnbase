@@ -1,0 +1,12 @@
+删到最后一条还是会出错，
+
+Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.
+    at del (13.message.html:129:19)
+    at HTMLTableCellElement.onclick (13.message.html:1:1)
+
+点html文件出现： del(1)
+
+
+
+
+

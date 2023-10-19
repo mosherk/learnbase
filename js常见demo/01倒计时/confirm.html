@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 280px;
+      background-color: #eee;
+      padding: 20px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    div p {
+      margin: 16px 0;
+    }
+    button {
+      margin: 30px 25px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>商品：笔记本电脑</p>
+    <p>原价：5999</p>
+    <p>现价：5599元</p>
+    <p>配件：适配器、电脑包、鼠标</p>
+    <p>提供保修、换新服务</p>
+    <p>
+      <button>取消</button>
+      <button>支付</button>
+    </p>
+  </div>
+  <script>
+    document.getElementsByTagName('button')[1].onclick = function(){
+      let res = window.confirm('您确认要支付吗')
+      if(res){
+        location.href = './succ.html'
+      }
+    }
+  </script>
+</body>
+</html>

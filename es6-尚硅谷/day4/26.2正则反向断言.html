@@ -12,8 +12,9 @@
         //提取555
         let str = 'js5211314你知道么555啦啦啦'
         //正向断言,根据后面的内容进行判断
-        // const reg = /\d+(?=啦)/
-        // const result = reg.exec(str)
+        const reg0 = /\d+(?=啦)/
+        const result0 = reg0.exec(str)
+        console.log(result0);
 
         //反向断言
         const reg = /(?<=么)\d+/

@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>正则扩展-命名捕获分组</title>
-</head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>正则扩展-命名捕获分组</title>
+</head> vm
 <body>
-    <script>
-        //对分组匹配的结果命名，方便对结果处理
-        // let str = '<a href="https://www.sysu.edu.cn/">中大</a>'
+	<script>
+		//对分组匹配的结果命名，方便对结果处理
+		// let str = '<a href="https://www.sysu.edu.cn/">中大</a>'
 
-        // //提取url和标签文本  (.*)捕获
-        // const reg = /<a href="(.*)">(.*)<\/a>/;
-        // // 执行
-        // const result = reg.exec(str)
+		// //提取url和标签文本  (.*)捕获
+		// const reg = /<a href="(.*)">(.*)<\/a>/;
+		// // 执行
+		// const result = reg.exec(str)
 
-        // console.log(result);
-        // console.log(result[1]);
-        // console.log(result[2]);
+		// console.log(result);
+		// console.log(result[1]);
+		// console.log(result[2]);
 
-        //分组
-        let str = '<a href="https://www.sysu.edu.cn/">中大</a>'
-        const reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
-        const result = reg.exec(str)
+		//分组
+		let str = '<a href="https://www.sysu.edu.cn/">中大</a>'
+		const reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
+		const result = reg.exec(str)
 
-        console.log(result);
-        console.log(result.groups.url);
-        console.log(result.groups.text);
+		console.log(result);
+		console.log(result.groups.url);
+		console.log(result.groups.text);
 
-    </script>
+	</script>
 </body>
+
 </html>

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>33String.prototype.matchAll</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>33String.prototype.matchAll</title>
 </head>
+
 <body>
-    <script>
-        let str = `
+	<script>
+		let str = `
         <ul>
             <li>
                 <a>肖申克的救赎</a>
@@ -19,17 +21,18 @@
                 <p>上映日期：1994-07-06</p>
             </li>
         </ul>`
-        let reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
+		let reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
 
-        //对数据批量提取非常有效 如爬虫
-        const result = str.matchAll(reg)
-        console.log(result);
-        // for(let v of result){
-        //     console.log(v);
-        // }
-        //也可以用扩展运算符展开
-        const arr = [...result]
-        console.log(arr);
-    </script>
+		//对数据批量提取非常有效 如爬虫
+		const result = str.matchAll(reg)
+		console.log(result);
+		// for(let v of result){
+		//     console.log(v);
+		// }
+		//也可以用扩展运算符展开
+		const arr = [...result]
+		console.log(arr);
+	</script>
 </body>
+
 </html>

@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数值扩展</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>数值扩展</title>
 </head>
+
 <body>
-    <script>
-        // 0.Number.EPSILON 是javascript
-        // EPSILON 属性的值接近于 2.2204460492503130808472633361816E-16
-        function equal(a,b){
-            if(Math.abs(a-b) < Number.EPSILON){
-                return true
-            }else{
-                return false
-            }
-        }
-        console.log(0.1+0.2 === 0.3);
-        console.log(equal(0.1+0.2, 0.3));
+	<script>
+		// 0.Number.EPSILON 是javascript
+		// EPSILON 属性的值接近于 2.2204460492503130808472633361816E-16
+		function equal(a, b) { //比较两个值是否相等
+			if (Math.abs(a - b) < Number.EPSILON) {
+				return true
+			} else {
+				return false
+			}
+		}
+		console.log(0.1 + 0.2 === 0.3);
+		console.log(equal(0.1 + 0.2, 0.3));
 
-        // 1.二进制和八进制
-        let b = 0b1010
-        let o = 0o777
-        let d = 100
-        let x = 0xff
+		// 1.二进制和八进制 十、十六
+		let b = 0b1010
+		let o = 0o777
+		let d = 100
+		let x = 0xff
 
-        console.log(b);
-        console.log(o);
-        console.log(d);
-        console.log(x);
-        console.log('-------------');
+		console.log(b);
+		console.log(o);
+		console.log(d);
+		console.log(x);
+		console.log('-------------');
 
-        // 2.Number.isFinite 检测一个数值是否为有限数
-        console.log(Number.isFinite(100));
-        console.log(Number.isFinite(100/0));
-        console.log(Number.isFinite(isFinite));
-        console.log('-------------');
+		// 2.Number.isFinite 检测一个数值是否为有限数
+		console.log(Number.isFinite(100));
+		console.log(Number.isFinite(100 / 0));
+		console.log(Number.isFinite(isFinite));
+		console.log('-------------');
 
-        // 3. Number.isNaN 检测一个数值是否为NaN
-        console.log(Number.isNaN(123));
+		// 3. Number.isNaN 检测一个数值是否为NaN
+		console.log(Number.isNaN(123));
 
-        // 4.Number.parseInt Number.parseFloat 字符串转整数
-        console.log(Number.parseFloat('3.15451生气'));
-        console.log(Number.parseInt('3.15451生气'));
+		// 4.Number.parseInt Number.parseFloat 字符串转整数和小数
+		console.log(Number.parseFloat('3.15451生气'));
+		console.log(Number.parseInt('3.15451生气'));
 
-        // 5.Number.isInteger 判断一个数是否为整数
-        console.log(Number.isInteger(5));
-        console.log(Number.isInteger(5.6));
+		// 5.Number.isInteger 判断一个数是否为整数
+		console.log(Number.isInteger(5));
+		console.log(Number.isInteger(5.6));
 
-        // 6.Math.trunc 将数字小数部分抹掉
-        console.log(Math.trunc(3.6515981));
+		// 6.Math.trunc 将数字小数部分抹掉
+		console.log(Math.trunc(3.6515981));
 
-        // 7.Math.sign 判断一个数到第是正数，负数，还是0
-        console.log(Math.sign(1561));  //1
-        console.log(Math.sign(0));     //0
-        console.log(Math.sign(-0));    //-0
-        console.log(Math.sign(-3661)); //-1
-    </script>
+		// 7.Math.sign 判断一个数到第是正数，负数，还是0
+		console.log(Math.sign(1561));  //1
+		console.log(Math.sign(0));     //0
+		console.log(Math.sign(-0));    //-0
+		console.log(Math.sign(-3661)); //-1
+	</script>
 </body>
+
 </html>

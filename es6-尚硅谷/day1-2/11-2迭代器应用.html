@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        const banji = {
-            name:'终极一班',
-            stus:[
-                'xiaoming',
-                'xiaoqiang',
-                'xiaotian',
-                'kngin'
-            ],
-            // 自定义遍历数组
-            [Symbol.iterator](){
-                _this = this
-                // 索引变量
-                let index= 0
-                return {
-                    next:function(){
-                        if(index < _this.stus.length){
-                            const result = {value: _this.stus[index],done:false}
-                            index++;
-                            return result;
-                        }else{
-                            return {value:undefined,done:true}
-                        }
-                    }
-                }
-            }
-        }
-        // 此时完成了对 对象的遍历
-        for(let v of banji){
-            console.log(v);
-        }
-        // 用for of遍历stus出里边的值
-        // banji.stus.forEach() 可以，但这直接操纵，不符合面向对象
 
-    </script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const banji = {
+			name: '终极一班',
+			stus: [
+				'xiaoming',
+				'xiaoqiang',
+				'xiaotian',
+				'kngin'
+			],
+			// 自定义遍历数组
+			[Symbol.iterator]() {
+				_this = this
+				// 索引变量
+				let index = 0
+				return {
+					next: function () {
+						if (index < _this.stus.length) {
+							const result = { value: _this.stus[index], done: false }
+							index++;
+							return result;
+						} else {
+							return { value: undefined, done: true }
+						}
+					}
+				}
+			}
+		}
+		// 此时完成了对 对象的遍历
+		for (let v of banji) {
+			console.log(v);
+		}
+		// 用for of遍历stus出里边的值
+		// banji.stus.forEach() 可以，但这直接操纵，不符合面向对象
+
+	</script>
 </body>
+
 </html>
